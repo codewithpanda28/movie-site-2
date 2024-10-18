@@ -2,14 +2,14 @@
 const movies = [
     { id: 1, title: "G.O.A.T Movie", image: "./image/goat.jpg?text=Movie+1" },
     { id: 2, title: "Devara , Full Movie", image: "https://catimages.org/images/2024/09/27/Devara-2024-Hindi-Dubbed-HDTS-Full-Movie-HDHub4u.jpg?text=Movie+2" },
-    { id: 3, title: "Salaar: Cease Fire – Part 1 (Hindi Dubbed)", image: "https://image.tmdb.org/t/p/w400/zAug8d6kpBMPyxZvY66q2x8csd.jpg?text=Movie+3" },
-    { id: 4, title: "Adipurush (Hindi Dubbed)", image: "https://catimages.org/images/2023/08/11/Adipurush-2023-Hindi-Dubbed-HDRip-Full-Movie-HDHub4u.jpg?text=Movie+4" },
-    { id: 5, title: "KGF Chapter 2 (Full Movie)", image: "https://myimg.click/images/2022/05/16/KGF-CHAPTER-2-2022-Hindi-ORG-WEBRip-Full-Movie.jpg?text=Movie+5" },
-    { id: 6, title: " Radhe Shyam (Full Movie)", image: "https://myimg.click/images/2022/05/04/IMG_20210127_161759.jpg?text=Movie+6" },
-    { id: 7, title: "Kalki (Hindi Dubbed)", image: "https://image.tmdb.org/t/p/w500/iNoPQCFktzDBiX5lQGksTZZPISb.jpg?text=Movie+7" },
-    { id: 8, title: "The Family Star (Hindi Dubbed)", image: "https://image.tmdb.org/t/p/w500/byS7hZTqIC4CvSyo0ePnX4HmH7f.jpg?text=Movie+8" },
-    { id: 9, title: "Stree 2 , Full Movie", image: "https://image.tmdb.org/t/p/w500/zgxpT5Q5pe3FtL99F0UOIglPGrQ.jpg?text=Movie+9" },
-    { id: 10, title: "Bad Newz , Full Movie", image: "https://image.tmdb.org/t/p/w400/qDlqxGATpYBWqGciPB4tmQm3bFT.jpg?text=Movie+10" },
+    { id: 3, title: "Maharaja Movie", image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEim0Tcu9mqT0pRPIWJ2W__2SzZNCc38t8pozRazGWcYLlwqvM6TtdVUGW04GLKfulCSG7gQRW-NmQeKdS_wJMdqkmPnywW-KJWBjxw3d7FB_pUeWVOKl2iYVyj1ZLsIsou0DdB7CqQH5DTlCscDngo0nLBRLbW7YIPzI2gz62guepecQW1kX-CeMPgm2kg/s320/Maharaja-2024-Hindi-Dubbed-HDRip-Full-Movie-HDHub4u.jpg?text=Movie+4" },
+    { id: 4, title: "The Family Star ", image: "https://image.tmdb.org/t/p/w500/byS7hZTqIC4CvSyo0ePnX4HmH7f.jpg?text=Movie+8" },
+    { id: 5, title: "Vicky Vidya Ka Woh Wala Video", image: "https://image.tmdb.org/t/p/w400/77gbFuFUfXx3OWv6pGhOAfHMBpg.jpg?text=Movie+5" },
+    { id: 6, title: " Pathaan (Full Movie)", image: "https://catimages.org/images/2023/03/22/Pathaan-2023-Hindi-HDRip-Full-Movie-HDHub4u.jpg?text=Movie+6" },
+    { id: 7, title: "Stree 2 (Full Movie)", image: "https://image.tmdb.org/t/p/w500/zgxpT5Q5pe3FtL99F0UOIglPGrQ.jpg?text=Movie+7" },
+    { id: 8, title: "Salaar: Part 1 (Hindi Dubbed)", image: "https://image.tmdb.org/t/p/w400/zAug8d6kpBMPyxZvY66q2x8csd.jpg?text=Movie+3" },
+    // { id: 9, title: "Stree 2 , Full Movie", image: "https://image.tmdb.org/t/p/w500/zgxpT5Q5pe3FtL99F0UOIglPGrQ.jpg?text=Movie+9" },
+    // { id: 10, title: "Bad Newz , Full Movie", image: "https://image.tmdb.org/t/p/w400/qDlqxGATpYBWqGciPB4tmQm3bFT.jpg?text=Movie+10" },
 ];
 
 const movieContainer = document.getElementById('movieContainer');

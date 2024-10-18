@@ -97,7 +97,7 @@
                             <li>Subtitles: ${movie.subtitles.join(', ')}</li>
                         </ul>
                         
-                        <button onclick="alert('Download started for ${movie.title}!')" class="download-button">Start Download</button>
+                       <button onclick="alert('Download started for ${movie.title}!')" class="download-button"><a class="a-text" href=${movie.downloadlink}>Start Download</a></button>
                     </div>
                     <button onclick="window.history.back()" class="back-button">Back to Movies</button>
                 </div>
@@ -112,5 +112,6 @@
             `;
         }
     </script>
+    <script src="watch-data.js"></script>
 </body>
 </html>

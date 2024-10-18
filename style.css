@@ -85,6 +85,11 @@
   }
 }
 
+.a-text{
+  text-decoration: none;
+  color: white;
+}
+
 body {
   font-family: Arial, sans-serif;
   font-size: 18px;
