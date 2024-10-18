@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Movie - AHub4u</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- video.js -->
+    <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
+  <link
+  href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic"
+  rel="stylesheet"
+/>
+</head>
+<body class="dark-mode">
+    <header>
+        <nav>
+            <img class="akash" src="./image/akash.jpg" alt="" />
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+    </header>
+    
+
+    <main>
+        <script type="text/javascript">
+            atOptions = {
+                'key' : 'a8aa84a587adae4ee8ac908f58161f5c',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.topcpmcreativeformat.com/a8aa84a587adae4ee8ac908f58161f5c/invoke.js"></script>
+
+        <div id="watchContent" class="watch-content">
+            <!-- Watch content will be dynamically inserted here -->
+        </div>
+
+        <script type='text/javascript' src='//pl24714233.cpmrevenuegate.com/40/35/d5/4035d5971944879fe4878b749c1b1e30.js'></script>
+
+        <div class="movie-description">
+            <h2>Movie Description</h2>
+            <p id="movieDescription"></p>
+        </div>
+
+        <div class="emoji-rating">
+            <h3>How did you feel about this movie?</h3>
+            <div class="emojis">
+                <span class="emoji" data-rating="5">😍</span>
+                <span class="emoji" data-rating="4">😊</span>
+                <span class="emoji" data-rating="3">😐</span>
+                <span class="emoji" data-rating="2">😕</span>
+                <span class="emoji" data-rating="1">😠</span>
+            </div>
+        </div>
+       
+        <script type="text/javascript">
+            atOptions = {
+                'key' : 'a8aa84a587adae4ee8ac908f58161f5c',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.topcpmcreativeformat.com/a8aa84a587adae4ee8ac908f58161f5c/invoke.js"></script>
+
+        <div class="comment-section">
+            <h3>Comments</h3>
+            <textarea id="commentBox" rows="4" placeholder="Leave your comment here..."></textarea>
+            <button id="submitComment">Submit Comment</button>
+            <div id="commentsContainer"></div>
+        </div>
+        <script type="text/javascript">
+            atOptions = {
+                'key' : 'a8aa84a587adae4ee8ac908f58161f5c',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.topcpmcreativeformat.com/a8aa84a587adae4ee8ac908f58161f5c/invoke.js"></script>
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2023 AHub4u. All rights reserved.</p>
+    </footer>
+
+    <script src="watch-data.js"></script>
+    <script>
+        const watchContent = document.getElementById('watchContent');
+        const urlParams = new URLSearchParams(window.location.search);
+        const movieId = parseInt(urlParams.get('id'));
+
+        const movie = movieData.find(m => m.id === movieId);
+
+        if (movie) {
+            watchContent.innerHTML = `
+                <div class="movie-card large-card">
+                    <h1>${movie.title}</h1>
+                    <div class="video-container">
+                        <video
+                        id="my-video"
+                        class="video-js"
+                        controls   preload="auto"
+                        width="800"
+                        height="264"
+                        poster="MY_VIDEO_POSTER.jpg"
+                            data-setup="{}">
+                            <source src="${movie.videoLink}" type="video/mp4">
+                            <source src="${movie.videoLink}" type="video/webm">
+                               <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a
+                            web browser that
+                            <a href="https://videojs.com/html5-video-support/" target="_blank"
+                                >supports HTML5 video</a
+                            >
+                            </p>
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p>You are watching: ${movie.title}</p>
+                    <button onclick="window.history.back()" class="back-button">Back to Movies</button>
+                </div>
+            `;
+            document.getElementById('movieDescription').textContent = movie.description || "No description available.";
+        } else {
+            watchContent.innerHTML = `
+                <div class="movie-card large-card">
+                    <h1>Movie Not Found</h1>
+                    <p>Sorry, the requested movie could not be found.</p>
+                    <button onclick="window.history.back()" class="back-button">Back to Movies</button>
+                </div>
+            `;
+        }
+
+        // Emoji rating functionality
+        const emojis = document.querySelectorAll('.emoji');
+        emojis.forEach(emoji => {
+            emoji.addEventListener('click', () => {
+                emojis.forEach(e => e.classList.remove('selected'));
+                emoji.classList.add('selected');
+                alert(`You rated this movie ${emoji.dataset.rating} stars!`);
+            });
+        });
+
+        // Comment section functionality
+        const commentBox = document.getElementById('commentBox');
+        const submitComment = document.getElementById('submitComment');
+        const commentsContainer = document.getElementById('commentsContainer');
+
+        submitComment.addEventListener('click', () => {
+            const comment = commentBox.value.trim();
+            if (comment) {
+                const commentElement = document.createElement('p');
+                commentElement.textContent = comment;
+                commentsContainer.appendChild(commentElement);
+                commentBox.value = '';
+            }
+        });
+
+        // Dark mode toggle functionality
+        function setDarkMode(isDark) {
+            if (isDark) {
+                document.body.classList.add('dark-mode');
+                darkModeToggle.textContent = '☀️';
+            } else {
+                document.body.classList.remove('dark-mode');
+                darkModeToggle.textContent = '🌙';
+            }
+            localStorage.setItem('darkMode', isDark);
+        }
+
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', () => {
+            const isDark = !document.body.classList.contains('dark-mode');
+            setDarkMode(isDark);
+        });
+
+        // Set initial dark mode based on localStorage or default to dark
+        const savedDarkMode = localStorage.getItem('darkMode');
+        setDarkMode(savedDarkMode === null ? true : savedDarkMode === 'true');
+    </script>
+    <!-- video.js -->
+    <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
+      <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+</body>
+</html>

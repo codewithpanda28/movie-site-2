@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About AHub4u - Your Ultimate Movie Destination</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic"
+    rel="stylesheet"
+  />
+</head>
+<body class="dark-mode">
+    <header>
+        
+        <nav>
+            <img class="akash" src="./image/akash.jpg" alt="" />
+            <ul>
+             
+             
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+    </header>
+
+    <main class="about-page">
+        <section class="hero">
+            <img src="./image/akash.jpg"  alt="Akash Kumar" class="team-photo">
+            <h1>About <b style="color: orangered;"> AHub4u</b></h1>
+        </section>
+
+        <section class="our-story">
+            <h2>My Story</h2>
+            <p>Welcome to my movie website! <b style="color: orangered;"> I'm Akash Kumar</b>, a passionate <b style="color: orangered;">software developer </b> hailing from <b style="color: orangered;">Jharkhand</b>. My journey in the world of technology began with a love for storytelling and a desire to create immersive experiences. This platform is a reflection of my dedication to bringing captivating narratives to life through film and digital media.</p>
+            
+        </section>
+
+        <section class="our-mission">
+            <h2>My Mission</h2>
+            <p>My mission is to harness the power of technology to enhance the way we experience movies.  </p>
+            <ul>
+                <li>I believe in creating a space where film lovers can discover, discuss, and celebrate the art of cinema.</li>
+                <li>With every project, I aim to blend creativity and innovation,</li>
+                <li> making films more accessible and engaging for everyone.</li>
+            </ul>
+        </section>
+
+        <section class="team">
+            <h2>Meet My Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="./image/akash.jpg" alt="Jane Doe" class="team-photo">
+                    <h3 style="color: red;">Akash Kumar</h3>
+                    <p>As a <b style="color: orangered;"> solo developer</b>, I wear many hats—from coding to design to content creation. My vision drives every aspect of this website, and I am committed to continuously improving it to serve fellow movie enthusiasts. While my team may be small, my passion for film and technology is vast.
+
+                        Thank you for visiting my site, and I hope you enjoy exploring the world of movies with me!</p>
+                </div>
+              
+                </div>
+            </div>
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : 'a8aa84a587adae4ee8ac908f58161f5c',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.topcpmcreativeformat.com/a8aa84a587adae4ee8ac908f58161f5c/invoke.js"></script>
+        </section>
+
+     
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2024 AHub4u. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Dark mode toggle functionality
+        function setDarkMode(isDark) {
+            if (isDark) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'true');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'false');
+            }
+        }
+
+        const darkModeToggle = document.getElementById('darkModeToggle');
+
+        darkModeToggle.addEventListener('click', () => {
+            const isDark = !document.body.classList.contains('dark-mode');
+            setDarkMode(isDark);
+            darkModeToggle.textContent = isDark ? '☀️' : '🌙';
+        });
+
+        // Set initial dark mode based on localStorage or default to dark
+        const savedDarkMode = localStorage.getItem('darkMode');
+        setDarkMode(savedDarkMode === null ? true : savedDarkMode === 'true');
+        darkModeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    </script>
+</body>
+</html>

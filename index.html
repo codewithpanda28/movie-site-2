@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KHub4u - Movie Website</title>
+    <link rel="stylesheet" href="style.css" />
+<!-- google adsense -->
+    <meta name="google-adsense-account" content="ca-pub-3266826923879126">
+    <script
+      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="about.html">
+            <img class="akash" src="./image/akash.jpg" alt="" />
+          </a>
+        </div>
+        <div class="menu-icon" id="menu-icon">☰</div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search for movies..."
+          aria-label="Search for movies"
+        />
+        <button id="searchButton">Search</button>
+      </div>
+
+      <div id="movieContainer" class="movie-container">
+        <!-- Movie cards will be dynamically inserted here -->
+      </div>
+    </main>
+
+    <footer>
+      <div class="social-icons">
+        <a href="#" class="social-icon" aria-label="Facebook"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="#" class="social-icon" aria-label="Twitter"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="#" class="social-icon" aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="#" class="social-icon" aria-label="YouTube"
+          ><i class="fab fa-youtube"></i
+        ></a>
+      </div>
+      <p>&copy; 2024 KHub4u. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

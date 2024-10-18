@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Movie - AHub4u</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic"
+    rel="stylesheet"
+  />
+</head>
+<body class="dark-mode">
+    <header>
+        <nav>
+            <img class="akash" src="./image/akash.jpg" alt="" />
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+    </header>
+    <script type='text/javascript' src='//pl24714010.cpmrevenuegate.com/45/00/f4/4500f46eb7859b90b5c5d880527118dc.js'></script>
+    <main>
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '0fd54e45bb2e64308bfde02f7ef3c8bb',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.topcpmcreativeformat.com/0fd54e45bb2e64308bfde02f7ef3c8bb/invoke.js"></script>
+        <div id="downloadContent" class="download-content">
+            
+            <!-- Download content will be dynamically inserted here -->
+        </div>
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '0fd54e45bb2e64308bfde02f7ef3c8bb',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.topcpmcreativeformat.com/0fd54e45bb2e64308bfde02f7ef3c8bb/invoke.js"></script>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AHub4u. All rights reserved.</p>
+    </footer>
+
+    <script src="download-data.js"></script>
+    <script>
+
+        // Dark mode toggle functionality  // Dark mode toggle functionality
+        function setDarkMode(isDark) {
+            if (isDark) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'true');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'false');
+            }
+        }
+
+        const darkModeToggle = document.getElementById('darkModeToggle');
+
+        darkModeToggle.addEventListener('click', () => {
+            const isDark = !document.body.classList.contains('dark-mode');
+            setDarkMode(isDark);
+            darkModeToggle.textContent = isDark ? '☀️' : '🌙';
+        });
+
+        const downloadContent = document.getElementById('downloadContent');
+        const urlParams = new URLSearchParams(window.location.search);
+        const movieId = parseInt(urlParams.get('id'));
+
+        const movie = movieData.find(m => m.id === movieId);
+
+        if (movie) {
+            downloadContent.innerHTML = `
+            
+                <div class="movie-card large-card">
+                    <h1>Download ${movie.title}</h1>
+                    <div class="download-details">
+                        <h2>Download Details</h2>
+                        <ul>
+                            <li>File size: ${movie.fileSize}</li>
+                            <li>Format: ${movie.format}</li>
+                            <li>Resolution: ${movie.resolution}</li>
+                            <li>Audio: ${movie.audio}</li>
+                            <li>Subtitles: ${movie.subtitles.join(', ')}</li>
+                        </ul>
+                        
+                        <button onclick="alert('Download started for ${movie.title}!')" class="download-button">Start Download</button>
+                    </div>
+                    <button onclick="window.history.back()" class="back-button">Back to Movies</button>
+                </div>
+            `;
+        } else {
+            downloadContent.innerHTML = `
+                <div class="movie-card large-card">
+                    <h1>Movie Not Found</h1>
+                    <p>Sorry, the requested movie could not be found.</p>
+                    <button onclick="window.history.back()" class="back-button">Back to Movies</button>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
