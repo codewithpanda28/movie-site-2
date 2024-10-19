@@ -9,7 +9,7 @@ const movies = [
     { id: 7, title: "Stree 2 (Full Movie)", image: "https://image.tmdb.org/t/p/w500/zgxpT5Q5pe3FtL99F0UOIglPGrQ.jpg?text=Movie+7" },
     { id: 8, title: "Salaar: Part 1 (Hindi Dubbed)", image: "https://image.tmdb.org/t/p/w400/zAug8d6kpBMPyxZvY66q2x8csd.jpg?text=Movie+3" },
     // { id: 9, title: "Stree 2 , Full Movie", image: "https://image.tmdb.org/t/p/w500/zgxpT5Q5pe3FtL99F0UOIglPGrQ.jpg?text=Movie+9" },
-    // { id: 10, title: "Bad Newz , Full Movie", image: "https://image.tmdb.org/t/p/w400/qDlqxGATpYBWqGciPB4tmQm3bFT.jpg?text=Movie+10" },
+    { id: 10, title: "Bad Newz , Full Movie", image: "https://image.tmdb.org/t/p/w400/qDlqxGATpYBWqGciPB4tmQm3bFT.jpg?text=Movie+10" },
 ];
 
 const movieContainer = document.getElementById('movieContainer');
@@ -25,7 +25,7 @@ function createMovieCard(movie) {
         <img src="${movie.image}" alt="${movie.title}">
         <h3>${movie.title}</h3>
         <div class="buttons">
-         <button onclick="watchMovie(${movie.id})">Watch </button> 
+ 
             <button onclick="downloadMovie(${movie.id})">Download</button>
         </div>
     `;

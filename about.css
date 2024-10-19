@@ -7,7 +7,10 @@
     margin: 0 auto;
     padding: 2rem;
 }
-
+.button-link{
+    display: flex;
+    gap: 18px;
+}
 .hero {
     text-align: center;
     padding: 4rem 0;

@@ -96,11 +96,14 @@
                             <li>Audio: ${movie.audio}</li>
                             <li>Subtitles: ${movie.subtitles.join(', ')}</li>
                         </ul>
-                        
-                       <button onclick="alert('Download started for ${movie.title}!')" class="download-button"><a class="a-text" href=${movie.downloadlink}>Start Download</a></button>
+                        <div class="button-link">
+                       <button onclick="alert('${movie.title}! Download started ')" class="download-button"><a class="a-text" href=${movie.low}>720p</a></button>
+                       <button onclick="alert('${movie.title}! Download started ')" class="download-button"><a class="a-text" href=${movie.mid}>1080p</a></button>
+                       <button onclick="alert('${movie.title}! Download started after Completed 4 Step Verification')" class="download-button"><a class="a-text" href=${movie.high}>4k</a></button>
+                   </div>
+                       </div>
                     </div>
                     <button onclick="window.history.back()" class="back-button">Back to Movies</button>
-                </div>
             `;
         } else {
             downloadContent.innerHTML = `
@@ -110,7 +113,10 @@
                     <button onclick="window.history.back()" class="back-button">Back to Movies</button>
                 </div>
             `;
+            
+            
         }
+        
     </script>
     <script src="watch-data.js"></script>
 </body>
